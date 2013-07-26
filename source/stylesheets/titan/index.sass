@@ -1,0 +1,275 @@
+@charset "UTF-8"
+
+/* ======================================================
+ *
+ *　ファイル名：index.css
+ *　概要：SNOWAY TOPのCSSに関する記述をしています
+ *
+ *======================================================
+
+/* -------------------------------------------------------
+ * レイアウト
+ * -----------------------------------------------------
+
+.topL
+  width: 320px
+  float: left
+
+.topR
+  width: 320px
+  float: right
+
+.topL2
+  width: 455px
+  float: left
+
+.topR2
+  width: 185px
+  float: right
+
+.topL3
+  width: 360px
+  float: left
+
+.topR3
+  width: 280px
+  float: right
+
+.box
+  border: 1px solid #ccc
+
+/* -------------------------------------------------------
+ * 左カラム
+ * -----------------------------------------------------
+
+.boxStripe1,
+.boxStripe2
+  padding: 7px 10px
+
+.boxStripe1
+  background: #e9e9e9
+
+.boxStripe2
+  background: #ddd
+
+.boxStripe1 h3,
+.boxStripe2 h3
+  float: left
+  margin-right: 5px
+
+.liStripe li
+  padding: 5px 10px
+  color: #666
+  background: #e9e9e9
+
+.liStripe li.check
+  background: #ddd
+
+.liStripe li img
+  margin-right: 5px
+  vertical-align: middle
+
+/* -------------------------------------------------------
+ * PHOTO
+ * -----------------------------------------------------
+
+.slideBox
+  background: #eee
+  position: relative
+
+.albumBox
+  padding: 10px 3px
+  background: #fff
+
+.albumBox li
+  float: left
+  width: 120px
+  height: 105px
+  padding: 0 4px
+  font-size: 80%
+
+.albumBox li p
+  height: 90px
+  overflow: hidden
+  margin-bottom: 3px
+
+.albumBox li img
+  vertical-align: bottom
+
+/* -------------------------------------------------------
+ * REVIEW
+ * -----------------------------------------------------
+
+.reviewGerande
+  margin-bottom: 8px
+  background: transparent url(/img/common/icn/icn_snoway_16.gif) no-repeat left top
+  padding-left: 20px
+
+.reviewGerande a
+  font-weight: bold
+
+.reviewGerande img
+  margin: 0
+
+.reviewDl
+  margin-left: 20px
+
+.reviewDl dt
+  background: transparent url(/img/common/icn/icn_review_16.gif) no-repeat left top
+  padding-left: 20px
+  margin-bottom: 8px
+  font-weight: bold
+  color: #333
+
+.reviewDl dd
+  line-height: 140%
+
+/* -------------------------------------------------------
+ * RANKING
+ * -----------------------------------------------------
+
+.dlStripe dt,
+.dlStripe dd
+  color: #666
+  background: #e9e9e9
+
+.dlStripe dt.check,
+.dlStripe dd.check
+  background: #ddd
+
+.dlStripe dt
+  float: left
+  width: 40px
+  padding: 5px 5px 5px 10px
+  text-align: right
+  height: 16px
+
+.dlStripe dd
+  float: left
+  width: 248px
+  padding: 5px 10px 5px 5px
+  height: 16px
+
+.dlStripe dt.rank1
+  background: #e9e9e9 url(/img/common/icn/icn_rank1_16.gif) no-repeat 10px center
+
+.dlStripe dt.rank2
+  background: #dddddd url(/img/common/icn/icn_rank2_16.gif) no-repeat 10px center
+
+.dlStripe dt.rank3
+  background: #e9e9e9 url(/img/common/icn/icn_rank3_16.gif) no-repeat 10px center
+
+/* -------------------------------------------------------
+ * 滑走記録
+ * -----------------------------------------------------
+.recordTable td
+  background: #e9e9e9
+  padding: 5px
+
+.recordTable td.check
+  background: #ddd
+
+.recordTable td.recordGelande
+  background: #e9e9e9 url(/img/common/icn/icn_snoway_16.gif) no-repeat left 3px
+  padding-left: 20px
+  font-weight: bold
+  width: 170px
+
+.recordTable td.recordGelande.check
+  background: #dddddd url(/img/common/icn/icn_snoway_16.gif) no-repeat left 3px
+
+.recordTable td img
+  vertical-align: middle
+  margin-right: 3px
+
+/* -------------------------------------------------------
+ * NEWS
+ * -----------------------------------------------------
+
+.newsDl
+  position: relative
+  min-height: 50px
+
+* html .newsDl
+  height: 50px
+
+.newsDl dt
+  margin-bottom: 5px
+  font-weight: bold
+  padding-left: 60px
+
+.newsDl dd.date
+  color: #999
+  font-size: 80%
+  padding-left: 60px
+
+.newsDl dd.img
+  position: absolute
+  left: 0
+  top: 0
+
+.newsDl dd.img img
+  margin: 0
+  border: 1px solid #ccc
+
+/* -------------------------------------------------------
+ * SNOWER
+ * -----------------------------------------------------
+
+.snowerDl
+  position: relative
+  min-height: 70px
+
+* html .snowerDl
+  height: 70px
+
+.snowerDl dt
+  margin-bottom: 5px
+  font-weight: bold
+
+.snowerDl dd.date
+  color: #666
+  font-size: 80%
+  padding-left: 60px
+  margin-bottom: 3px
+
+.snowerDl dd.img
+  position: absolute
+  left: 0
+  top: 20px
+
+.snowerDl dd.img img
+  margin: 0
+
+.snowerDl dd.img img.bor
+  border: 1px solid #ccc
+
+.voteJunbi
+  background: #e9e9e9
+  padding: 10px
+
+.reviewDate
+  font-size: 90%
+
+.countReview
+  font-size: 83%
+  margin-left: 3px
+
+/* -------------------------------------------------------
+ * Info
+ * -----------------------------------------------------
+
+.gelandeInfo .infoTitle
+  margin-bottom: 5px
+  background: url(/img/common/icn/icn_snoway_16.gif) no-repeat left top
+  padding-left: 20px
+  font-weight: bold
+
+.gelandeInfo .infoDesc
+  line-height: 1.3
+  padding-left: 20px
+
+.gelandeInfo .infoDate
+  font-size: 83%
+  text-align: right
+  margin-top: 5px
