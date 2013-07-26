@@ -1,0 +1,73 @@
+$(function(){
+	$("#chihoForm").change(function(){
+		var chiho_id = $("#chihoForm").val();
+		$("#gelandeForm").children().remove();
+		$("#todofukenForm").children().remove();
+		$("#todofukenForm").append('<option value="">--都道府県--</option>');
+		if(chiho_id){
+			change_chiho_gelande(chiho_id);
+			change_chiho_todofuken(chiho_id);
+		}else{
+			$("#gelandeForm").append('<option value="">選択しない</option>');
+			$("#count").text("");
+		}
+	});
+	$("#todofukenForm").change(function(){
+		var todofuken_id = $("#todofukenForm").val();
+		$("#gelandeForm").children().remove();
+		if(todofuken_id){
+			change_todofuken_gelande(todofuken_id);
+		}else{
+			var chiho_id = $("#chihoForm").val();
+			change_chiho_gelande(chiho_id);			
+		}
+	});
+});
+
+function change_chiho_gelande(chiho_id){
+	$.ajax({
+		url : "http://snoway.jp/api/search_gelande.php?t=chiho&c="+chiho_id,
+		type : "GET",
+		dataType: "json",
+		success : function(data){
+			//data = "(" + data + ")";
+			data = eval(data);
+			$("#count").text(data.item.length+"件のゲレンデが見つかりました");
+			for(i=0;i<data.item.length;i++){
+				$("#gelandeForm").append('<option value="'+data.item[i].gelande_id+'">'+data.item[i].name+'</option>');
+			}
+			$("#gelandeForm").append('<option value="">選択しない</option>');
+		}
+	});
+}
+function change_chiho_todofuken(chiho_id){
+	$.ajax({
+		url : "http://snoway.jp/api/search_area.php?t=chiho&c="+chiho_id,
+		type : "get",
+		dataType: "json",
+			success : function(data){
+			//data = "(" + data2 + ")";
+			data = eval(data);
+			for(i=0;i<data.item.length;i++){
+				$("#todofukenForm").append('<option value="'+data.item[i].todofuken_id+'">'+data.item[i].todofuken_name+'</option>');
+			}
+		}
+	});
+}
+function change_todofuken_gelande(todofuken_id){
+	$.ajax({
+		url : "http://snoway.jp/api/search_gelande.php?t=todofuken&c="+todofuken_id,
+		type : "get",
+		dataType: "json",
+			success : function(data){
+			//data = "(" + data3 + ")";
+			data = eval(data);
+			$("#count").text(data.item.length+"件のゲレンデが見つかりました");
+			for(i=0;i<data.item.length;i++){
+				$("#gelandeForm").append('<option value="'+data.item[i].gelande_id+'">'+data.item[i].name+'</option>');
+			}
+			$("#gelandeForm").append('<option value="">選択しない</option>');
+		}
+	});
+}
+
