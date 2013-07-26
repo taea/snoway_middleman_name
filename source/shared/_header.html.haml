@@ -1,0 +1,58 @@
+%header#header
+  %script{:src => "http://partner.googleadservices.com/gampad/google_service.js", :type => "text/javascript"}
+  :javascript
+    GS_googleAddAdSenseService("ca-pub-7399110747853108");
+    GS_googleEnableAllServices();
+  :javascript
+    GA_googleAddSlot("ca-pub-7399110747853108", "snoway_all_halfbanner_pos1_234x60");
+    GA_googleAddSlot("ca-pub-7399110747853108", "snoway_all_halfbanner_pos2_234x60");
+    GA_googleAddSlot("ca-pub-7399110747853108", "snoway_all_halfbanner_pos3_234x60");
+    GA_googleAddSlot("ca-pub-7399110747853108", "snoway_all_position1_300x250");
+  :javascript
+    GA_googleFetchAds();
+  :javascript
+    jQuery(function($){
+      $('.powertip').powerTip();
+    });
+  .header-inner
+    %p#logo
+      %a{:href => "/"}
+        %img{:alt => "snoway スノーウェイ", :src => "img/titan/common/header_logo.png"}/
+    .header-search-form
+      %form{:action => "http://www.google.co.jp/search", :method => "get"}
+        %input.inputtext{:maxlength => "255", :name => "q", :size => "31", :type => "text", :value => ""}/
+        %input{:name => "ie", :type => "hidden", :value => "UTF-8"}/
+        %input{:name => "oe", :type => "hidden", :value => "Shift_JIS"}/
+        %input{:name => "hl", :type => "hidden", :value => "ja"}/
+        %input{:name => "btnG", :type => "submit", :value => "検索"}/
+        %input{:name => "domains", :type => "hidden", :value => "snoway.jp"}/
+        %input{:name => "sitesearch", :type => "hidden", :value => "snoway.jp"}/
+  .hdrMenu-wrapper
+    %nav#hdrMenu
+      %ul
+        %li= link_to "#{content_tag :i, 'car', class: 'icon-lsf lsf'}スキー場を探す", '#'
+        %li.dropdown
+          = link_to "#{content_tag :i, nil, class: 'icon-calendar'}予約する#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+          %ul.dropdown-content
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーツアーを探す", '#'
+            %li= link_to "#{content_tag :i, nil', class: 'icon-caret-right'}周辺のホテルを予約", '#'
+        %li.dropdown
+          = link_to "#{content_tag :i, nil, class: 'icon-cart'}ショッピング＆準備", '#'
+          %ul.dropdown-content
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ショップを探す", '#'
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ギアを探す", '#'
+
+        %li.dropdown
+          = link_to "#{content_tag :i, nil, class: 'icon-comments'}コミュニティ", '#'
+          %ul.dropdown-content
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーウェイトーク", '#'
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}Snower ランキング", '#'
+    %ul#login
+      %li
+        %a{:href => "/member/login.php"}
+          %i.icon-user>
+          新規会員登録
+      %li
+        %a{:href => "/my/login/?url=http%3A%2F%2Fsnoway.jp%2F", :rel => "nofollow,noindex"}
+          %i.icon-sign-in>
+          ログイン

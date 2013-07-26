@@ -1,0 +1,417 @@
+---
+スキー場の口コミサイト スノーウェイ
+---
+#maincontent
+  #main
+    %section.section
+      %h2 PICKUP スキー場
+      %ul.ad-pickup
+        - 4.times do
+          %li
+            %a{:href => "#"}
+              %img{:alt => "ゲレンデ名", :src => "http://snoway.jp/img/review/s/00/27/10002722.jpg"}/
+            %h3.title
+              %a{:href => "#"}
+                グランデコスキー場
+                %br/
+                %span （福島）
+            .point-small
+              %i.icon-star
+              %i.icon-star
+              %i.icon-star
+              %i.icon-star
+              %i.icon-star
+              %span.num 3.5
+            %p
+              %a{:href => "#"}
+                １２文字を２段にします
+                %br>/
+                １２文字を２段にします
+
+    %section.section
+      %h2
+        %a{:href => "#"}
+          %i.icon-file-text-alt>
+          新着トピックス
+          %i.icon-caret-right
+      %ul.section-list
+        - 7.times do
+          %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}野沢餅つき大会", '#'
+
+    %section.section
+      %h2= "#{content_tag :i, nil, class: 'icon-calendar'}もうすぐ開催のイベント#{content_tag :i, nil, class: 'icon-caret-right'}"
+      %ul.section-list.top-event
+        - 2.times do
+          %li
+            = link_to "08/24(日)開催のイベント#{content_tag :i, nil, class: 'icon-caret-right'}", '#'
+            %ul
+            - 2.times do
+              %li= "#{content_tag :i, nil, class: 'icon-flag'}野沢餅つき大会"
+
+    .ad.wide
+    %section.left
+      %h2
+        %a{:href => "#"}
+          %i.icon-calendar>
+          新着滑走記録
+          %i.icon-caret-right
+      %ul.section-list.skying-records
+        - 8.times do
+          %li
+            %ul
+              %li.thumbnail-s
+                = link_to image_tag("https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/195380_785944456_1205910944_q.jpg", alt: "USERNAME"), '#', class: 'powertip', title: 'USERNAME'
+              %li.num= link_to '05/21', '#'
+              %li.gerande= link_to '月山'
+
+    %section.section
+      %h2= link_to "#{content_tag :i, nil, class: 'icon-comments'}新着のトーク#{content_tag :i, nil, class: 'icon-caret-right'}", '#'
+      %ul.section-list.talk
+        %li.snowboard= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+        %li.ski= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+        %li.gerande= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+        %li.qa= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+        %li.others= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+        %li.qa= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+        %li.others= link_to "#{content_tag :i, nil, class: 'icon-comments'}マナーの悪い人が多いというか.....#{content_tag :span, 3, class: 'num'}", '#' 
+
+    %section.section
+      %h2= link_to "#{content_tag :i, nil, class: 'icon-crown'}新着のトーク#{content_tag :i, nil, class: 'icon-caret-right'}", '#'
+      %section.inner-section
+        %h3 滑走日数ランキング
+        %ul.top-user-ranking
+          %li
+            %ul
+            %a{:href => "#"}
+          %li.ranking
+            %span.num 1
+          %li.thumbnail-l
+            %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+          %li.username
+            %a{:href => "#"} おっちゃん
+          %li.value
+            %span.num 148
+        %li
+          %ul
+          %a{:href => "#"}
+        %li.ranking
+          %span.num 1
+        %li.thumbnail-l
+          %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+        %li.username
+          %a{:href => "#"} おっちゃん
+        %li.value
+          %span.num 148
+        %li
+          %ul
+          %a{:href => "#"}
+        %li.ranking
+          %span.num 1
+        %li.thumbnail-l
+          %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+        %li.username
+          %a{:href => "#"} おっちゃん
+        %li.value
+          %span.num 148
+      %section.inner-section
+        %h3 今シーズンのレビュー数
+        %ul.top-user-ranking
+          %li
+            %ul
+            %a{:href => "#"}
+          %li.ranking
+            %span.num 1
+          %li.thumbnail-l
+            %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+          %li.username
+            %a{:href => "#"} おっちゃん
+          %li.value
+            %span.num 148
+        %li
+          %ul
+          %a{:href => "#"}
+        %li.ranking
+          %span.num 1
+        %li.thumbnail-l
+          %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+        %li.username
+          %a{:href => "#"} おっちゃん
+        %li.value
+          %span.num 148
+        %li
+          %ul
+          %a{:href => "#"}
+        %li.ranking
+          %span.num 1
+        %li.thumbnail-l
+          %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+        %li.username
+          %a{:href => "#"} おっちゃん
+        %li.value
+          %span.num 148
+      %section.inner-section
+        %h3 アクセス数
+        %ul.top-user-ranking
+          %li
+            %ul
+            %a{:href => "#"}
+          %li.ranking
+            %span.num 1
+          %li.thumbnail-l
+            %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+          %li.username
+            %a{:href => "#"} おっちゃん
+          %li.value
+            %span.num 148
+        %li
+          %ul
+          %a{:href => "#"}
+        %li.ranking
+          %span.num 1
+        %li.thumbnail-l
+          %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+        %li.username
+          %a{:href => "#"} おっちゃん
+        %li.value
+          %span.num 148
+        %li
+          %ul
+          %a{:href => "#"}
+        %li.ranking
+          %span.num 1
+        %li.thumbnail-l
+          %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg"}/
+        %li.username
+          %a{:href => "#"} おっちゃん
+        %li.value
+          %span.num 148
+    %section.section
+      %h2
+        %a{:href => "#"}
+          %i.icon-shopping-cart>
+          全国 スキー＆スノーボード ショップ情報
+          %i.icon-caret-right
+      %ul.ad-pickup
+        %li
+          %a{:href => "#"}
+            %img{:alt => "ゲレンデ名", :src => "http://snoway.jp/img/review/s/00/27/10002722.jpg"}/
+          %h3.title
+            %a{:href => "#"}
+              UPLAND札幌
+              %span （北海道）
+          %p
+            %a{:href => "#"}
+              １２文字を２段にします
+              %br>/
+              １２文字を２段にします
+        / //li
+        %li
+          %a{:href => "#"}
+            %img{:alt => "ゲレンデ名", :src => "http://snoway.jp/img/review/s/00/27/10002722.jpg"}/
+          %h3.title
+            %a{:href => "#"}
+              UPLAND札幌
+              %span （北海道）
+          %p
+            %a{:href => "#"}
+              １２文字を２段にします
+              %br>/
+              １２文字を２段にします
+        / //li
+        %li
+          %a{:href => "#"}
+            %img{:alt => "ゲレンデ名", :src => "http://snoway.jp/img/review/s/00/27/10002722.jpg"}/
+          %h3.title
+            %a{:href => "#"}
+              UPLAND札幌
+              %span （北海道）
+          %p
+            %a{:href => "#"}
+              １２文字を２段にします
+              %br>/
+              １２文字を２段にします
+        / //li
+        %li
+          %a{:href => "#"}
+            %img{:alt => "ゲレンデ名", :src => "http://snoway.jp/img/review/s/00/27/10002722.jpg"}/
+          %h3.title
+            %a{:href => "#"}
+              UPLAND札幌
+              %span （北海道）
+          %p
+            %a{:href => "#"}
+              １２文字を２段にします
+              %br>/
+              １２文字を２段にします
+        / //li
+  %aside#sub
+    .ad.lectangle
+      / ca-pub-7399110747853108/snoway_all_position1_300x250
+      :javascript
+        GA_googleFillSlot("snoway_all_position1_300x250");
+    %section.user-box-section
+      .user-box-header
+        %p.thumbnail
+          %a{:href => "#"}
+            %img{:alt => "USERNAME", :src => "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/195380_785944456_1205910944_q.jpg"}/
+        .user-box-section-right
+          %h2
+            %a{:href => "#"} おっちゃん
+          %p.mood-message
+            %a{:href => "#"} シーズンイン！
+            %i.icon-pencil
+      %dl.user-box-dl
+      %a{:class => "#"}
+      %dt
+        %i.icon-calendar>
+        滑走日数
+      %dd
+        %span.num
+          35
+          日
+      %dd
+        %a{:class => "#"}
+      %dt
+        %i.icon-star>
+        レビュー
+      %dd
+        %span.num
+          37
+          件
+      %dd
+        %a{:class => "#"}
+      %dt
+        %i.icon-comments>
+        トーク
+      %dd
+        %span.num
+          28
+          件
+      %dd
+        %a{:class => "#"}
+      %dt
+        %i.icon-camera>
+        photo
+      %dd
+        %span.num
+          101
+          枚
+      %dd
+    %section.section
+      %h2
+        %a{:href => "#"}
+          %i.icon-bar-chart>
+          ゲレンデ積雪情報
+        %i.icon-caret-right
+      %dl.section-dl.snow-conditions
+      %a{:href => "#"}
+      %dt
+        %i.icon-caret-right>
+        月山
+      %dd.depth
+        %span.num> 460
+        cm
+      %dd.condition ザラ雪
+      %a{:href => "#"}
+      %dt
+        %i.icon-caret-right>
+        月山
+      %dd.depth
+        %span.num> 460
+        cm
+      %dd.condition ザラ雪
+      %a{:href => "#"}
+      %dt
+        %i.icon-caret-right>
+        月山
+      %dd.depth
+        %span.num> 460
+        cm
+      %dd.condition ザラ雪
+      %p.link-more
+        %a{:href => "#"}
+          もっと見る
+          %i.icon-double-angle-right
+    %section.section
+      %h2
+        %a{:href => "#"}
+          %i.icon-calendar>
+          2013-14シーズン スキー場オープン情報
+          %i.icon-caret-right
+      %dl.section-dl.open-information
+      %a{:href => "#"}
+      %dt
+        %i.icon-caret-right>
+        斜里町ウナベツスキー場
+      %dd.date 01/13
+      %a{:href => "#"}
+      %dt
+        %i.icon-caret-right>
+        斜里町ウナベツスキー場
+      %dd.date 01/13
+      %a{:href => "#"}
+      %dt
+        %i.icon-caret-right>
+        斜里町ウナベツスキー場
+      %dd.date 01/13
+      %p.link-more
+        %a{:href => "#"}
+          もっと見る
+          %i.icon-double-angle-right
+    %section.ad.medium
+      %h2 [PR]
+      .taC
+        / ca-pub-7399110747853108/snoway_all_halfbanner_pos1_234x60
+        :javascript
+          GA_googleFillSlot("snoway_all_halfbanner_pos1_234x60");
+      .taC
+        / ca-pub-7399110747853108/snoway_all_halfbanner_pos2_234x60
+        :javascript
+          GA_googleFillSlot("snoway_all_halfbanner_pos2_234x60");
+      .taC
+        / ca-pub-7399110747853108/snoway_all_halfbanner_pos3_234x60
+        :javascript
+          GA_googleFillSlot("snoway_all_halfbanner_pos3_234x60");
+    %section.section
+      %h2
+        %a{:href => "#", :target => "blank"}
+          %i.icon-rss>
+          スノーウェイからのお知らせ
+          %i.icon-external-link
+      %ul.section-list
+        %li
+          %a{:href => "http://info.snoway.jp/archives/1764183.html", :target => "_blank"}
+            %i.icon-caret-right>
+            【2013-2014シーズン】早割シーズン券情報
+            %span （2013年06月19日）
+        %li
+          %a{:href => "http://info.snoway.jp/archives/1764183.html", :target => "_blank"}
+            %i.icon-caret-right>
+            【2013-2014シーズン】早割シーズン券情報
+            %span （2013年06月19日）
+        %li
+          %a{:href => "http://info.snoway.jp/archives/1764183.html", :target => "_blank"}
+            %i.icon-caret-right>
+            【2013-2014シーズン】早割シーズン券情報
+            %span （2013年06月19日）
+        %li
+          %a{:href => "http://info.snoway.jp/archives/1764183.html", :target => "_blank"}
+            %i.icon-caret-right>
+            【2013-2014シーズン】早割シーズン券情報
+            %span （2013年06月19日）
+        %li
+          %a{:href => "http://info.snoway.jp/archives/1764183.html", :target => "_blank"}
+            %i.icon-caret-right>
+            【2013-2014シーズン】早割シーズン券情報
+            %span （2013年06月19日）
+      %p.link-more
+        %a{:href => "http://info.snoway.jp/", :target => "_blank"}
+          Snoway オフィシャルブログへ
+          %i.icon-external-link
+    .ad.lectangle
+      %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsnowayjp&amp;width=300&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false", :style => "border:none; overflow:hidden; width:300px; height:258px;"}
+    .ad
+      %h2 [スポンサードリンク]
+      :javascript
+
+      %script{:src => "http://pagead2.googlesyndication.com/pagead/show_ads.js", :type => "text/javascript"}

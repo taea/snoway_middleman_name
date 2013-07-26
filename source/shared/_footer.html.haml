@@ -1,0 +1,62 @@
+%footer#footer
+  .footer-inner
+    .footer-column
+      .logo= link_to image_tag('images/footer_logo.png', alt: 'Snoway'), '#'
+      %p.copy
+        = "#{content_tag :strong, 'スキーヤー・スノーボーダー'}のための"
+        %br
+        = "みんなでつくる#{content_tag :strong, 'スキー場'}口コミサイト"
+      %ul.external-media
+        %li= link_to "#{content_tag :i, nil, class: 'icon-twitter-sign'}Snoway 公式Twitter", '#', target: "_blank"
+        %li= link_to "#{content_tag :i, nil, class: 'icon-facebook-sign'}Facebookページ", '#', target: "_blank"
+        %li= link_to "#{content_tag :i, nil, class: 'icon-rss'}Snoway 公式ブログ", '#', target: "_blank"
+
+      %address#ftr-bar copyright (C) 2013 snoway.jp All rights are reserved.
+    .footer-column
+      %section.section
+        %h2= link_to "スキー場を探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+        %ul.section-list
+          %li
+            %h3= link_to "エリアから探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+            %ul.float-list
+              - 8.times do
+                %li= link_to '北海道', '#'
+          %li= link_to "イベントで探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "ニュース・トピックで探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "ランキングで探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "積雪で探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "ゲレンデオープン情報#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li
+            %ul.float-list
+              - 9.times do
+                %li= link_to 'ニセコ', '#'
+    .footer-column
+      %section.section
+        %h2= link_to "スキー旅行を予約する#{content_tag :i, nil, class: 'icon-caret-right'}"
+        %ul.section-list
+          %li= link_to "スキーツアーを探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "スキー場の近くのホテルを予約#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "日帰り温泉情報#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "海外スキー場#{content_tag :i, nil, class: 'icon-caret-right'}"
+      %section.section
+        %h2= link_to "ショップを探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+        %ul.section-list
+          %li= link_to "ギアをを探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "メーカーから探す#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "持ち物リストをチェックする#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "用語を調べる#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "大会情報#{content_tag :i, nil, class: 'icon-caret-right'}"
+    .footer-column
+      %section.section
+        %h2= link_to "コミュニティ#{content_tag :i, nil, class: 'icon-caret-right'}"
+        %ul.section-list
+          %li= link_to "スノーウェイトーク#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "Snower ランキング#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "雪山滑走記録#{content_tag :i, nil, class: 'icon-caret-right'}"
+      .section
+        %ul.section-list
+          %li= link_to "利用規約#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "お問い合わせ#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "サイトマップ#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "リンクについて#{content_tag :i, nil, class: 'icon-caret-right'}"
+          %li= link_to "ビーチ・海・プールの情報サイト ビーチウェイ#{content_tag :i, nil, class: 'icon-caret-right'}"
