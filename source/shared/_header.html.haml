@@ -13,7 +13,17 @@
   :javascript
     jQuery(function($){
       $('.powertip').powerTip();
-      alert('いぬよ')
+
+      $('ul.tab-box-content-list li').hide();
+      $('ul.tab-box-content-list li:first-child').show();
+      $('ul.tab-box-nav li').on('click', function(){
+        $('ul.tab-box-nav').find('li.current').toggleClass('current')
+        $(this).toggleClass('current')
+        var tabBoxIndex = $('ul.tab-box-nav li').index(this) + 1;
+        $(this).parent().parent().find('ul.tab-box-content-list li').hide();
+        $(this).parent().parent().find('ul.tab-box-content-list li:nth-child(' + tabBoxIndex +')').show();
+      });
+
     });
   .header-inner
     .header-upper

@@ -33,10 +33,10 @@
     .section.tab-box
       %nav
         %ul.tab-box-nav
-          %li.tab-box-nav-1.current= "#{content_tag :i, nil, class: 'icon-map-marker'}エリアで探す"
-          %li.tab-box-nav-2= "#{content_tag :i, 'car', class: 'lsf icon-lsf'}アクセスで探す"
-          %li.tab-box-nav-3= "#{content_tag :i, nil, class: 'icon-flag'}イベントで探す"
-          %li.tab-box-nav-4= "#{content_tag :i, nil, class: 'icon-comments'}レビューで探す"
+          %li.current= "#{content_tag :i, nil, class: 'icon-map-marker'}エリアで探す"
+          %li= "#{content_tag :i, 'car', class: 'lsf icon-lsf'}アクセスで探す"
+          %li= "#{content_tag :i, nil, class: 'icon-flag'}イベントで探す"
+          %li= "#{content_tag :i, nil, class: 'icon-comments'}レビューで探す"
         .tab-box-content-wrapper
           %ul.tab-box-content-list
             %li.tab-box-content.tab-box-content-1
