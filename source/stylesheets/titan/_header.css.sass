@@ -1,0 +1,135 @@
+/* -------------------------------------------------------
+ * ヘッダー
+ * -----------------------------------------------------
+
+#snoway-wrap
+  width: $width
+  margin: 0 auto
+  text-align: left
+
+#header
+  width: 100%
+  margin: auto
+  +pie-clearfix
+  background: $header-color
+  margin-bottom: 30px
+
+.header-inner
+  width: $width
+  margin: 0 auto
+
+.header-upper
+  +pie-clearfix
+  height: 80px
+
+#logo
+  width: 216px
+  float: left
+  margin:
+    top: 15px
+
+#login
+  float: right
+  +pie-clearfix
+  a
+    display: inline-block
+    color: rgba(255,255,255,.9)
+    padding:
+      top: 6px
+    i
+      font-size: 120%
+      margin-right: 3px
+      color: $op-white
+      +relative
+      top: 1px
+    &:hover
+      color: white
+      i
+        color: white
+      
+  li
+    float: left
+    margin-left: 15px
+    &.thumbnail
+      @extend .circle-thumbnail-s
+    &.username
+      margin-left: 3px
+      font-weight: bold
+          
+
+#hdrComment
+  background: transparent url(/img/common/snower_comment.gif) no-repeat left top
+  height: 22px
+  width: 326px
+  line-height: 22px
+  padding: 0 5px 0 28px
+  color: #957a1a
+
+/* グローバルメニュー
+.hdrMenu-wrapper
+  width: 100%
+  background: $main-color
+  +pie-clearfix
+  height: 35px
+
+.hdrMenu-inner
+  width: $width
+  +pie-clearfix
+  margin: 0 auto
+
+#hdrMenu
+  float: left
+  +pie-clearfix
+  li
+    float: left
+    +relative
+    a
+      color: rgba(255,255,255,.9)
+      display: inline-block
+      height: 34px
+      line-height: 34px
+      margin-right: 20px
+      font-size: $size-14px
+      font-weight: bold
+      i
+        font-size: 160%
+        color: rgba(255,255,255,.5)
+        margin-right: 5px
+        +relative
+        top: 1px
+        &.icon-calendar, &.icon-shopping-cart
+          +relative
+          top: 2px
+        &.lsf
+          font-size: 180%
+          +relative
+          top: 1px
+        &.icon-caret-down
+          font-size: 80%
+          margin-left: 5px
+      &:hover
+        color: white
+        i
+          color: white
+
+.dropdown-content
+  $dropdown-color: rgba(0,0,0,.75)
+  +balloon-top($color: $dropdown-color, $left: 10px)
+  width: 200px
+  background: $dropdown-color
+  color: white
+  +absolute
+  +border-radius(4px)
+  padding: 15px
+  top: 35px
+  left: -10px
+  +none
+  li
+    a
+      float: none
+      display: block
+      color: white
+      height: 24px
+      line-height: 24px
+      i.icon-caret-right
+        font-size: 80% !important
