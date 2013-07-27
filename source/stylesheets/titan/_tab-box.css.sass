@@ -1,0 +1,27 @@
+.tab-box
+
+.tab-box-nav
+  +pie-clearfix
+  li
+    float: left
+    padding: 8px
+    background: $base-color
+    +relative
+    i
+      color: $icon-color
+      font-size: 150%
+    &:hover
+      cursor: pointer
+      background: $main-color
+      color: white
+      i
+        color: rgba(255,255,255,.5)
+    &.current
+      cursor: pointer
+      background: $main-color
+      color: white
+      top: -2px
+      padding: 9px 8px
+      i
+        color: rgba(255,255,255,.5)
+
