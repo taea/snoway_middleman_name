@@ -81,3 +81,5 @@ end
 # Template Engine Option
 set :haml, { :ugly => true, :format => :html5 }
 
+# Middleman LiveReload
+activate :livereload
