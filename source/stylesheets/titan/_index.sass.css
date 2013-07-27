@@ -1,0 +1,100 @@
+/* -------------------------------------------------------
+ * index
+ * -----------------------------------------------------
+#top-display
+  +relative
+  height: 400px
+  overflow: hidden
+  background-width: 100%
+  z-index: 1
+  margin-bottom: 30px
+
+.top-display-container
+  +absolute
+  height: 400px
+  overflow: hidden
+  width: 100%
+  min-width: 1024px
+  z-index: 10
+
+img.bg
+  min-height: 100%
+  min-width: 1024px
+  width: 100%
+  height: auto
+  +absolute
+  top: 0
+  left: 0
+  z-index: 2
+
+@media screen and (max-width: 1024px)
+  img.bg, .top-display-bg-container
+    left: 50%
+    margin-left: -512px
+
+.top-display-info
+  background: rgba(255,255,255,.8)
+  color: $text-color
+  height: 40px
+  +absolute
+  width: 100%
+  left: 0
+  bottom: 0
+  a
+    color: $text-color
+    &:hover
+      color: $hover-color
+  .inner
+    width: $width
+    text-align: left
+    margin: 0 auto
+    +relative
+  .title
+    margin-top: 5px
+    font-weight: bold
+    font-size: $size-18px
+    a
+      font-weight: bold
+      color: $text-color
+      span
+        font-weight: normal
+        font-size: 80%
+        margin-left: 10px
+  .photo-author
+    +absolute
+    top: 5px
+    right: 0
+    font-size: $size-11px
+
+.top-display-inner
+  width: $width
+  margin: 0 auto
+    top: 30px
+  text-align: left
+  +pie-clearfix
+
+.top-display-user-review
+  width: 360px 
+  float: right
+  .user-review
+    background: rgba(255,255,255,.8)
+    padding: 20px
+    float: right
+    width: 250px
+    +balloon-left($color: rgba(255,255,255,.8), $top: 20px)
+    h3
+      a
+        color: $text-color
+        font-weight: bold
+    p
+      color: $text-color
+      &.author
+        font-size: $size-11px
+        margin-bottom: 0
+        a
+          color: $text-color
+  .thumbnail
+    @extend .circle-thumbnail-m
+    border: 2px solid white
+    float: left
+    margin-right: 10px

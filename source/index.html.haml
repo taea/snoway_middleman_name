@@ -1,6 +1,33 @@
 ---
 スキー場の口コミサイト スノーウェイ
 ---
+#top-display
+  .top-display-bg-container
+    = link_to image_tag('http://www.princehotels.co.jp/image.jsp?id=50460', alt: '苗場スキー場', class: 'bg'), '#'
+  .top-display-container
+    .top-display-inner
+      .top-display-user-review
+        .thumbnail= link_to image_tag('https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/579829_10151095637604457_175483388_n.jpg', alt: 'おっちゃん'), '#', class: 'powertip', title: 'おっちゃん'
+        .user-review
+          %h3= link_to 'やっぱりここは安心感ありますね', '#'
+          %p
+            雪の量はまだまだ十分。
+            %br/
+            ただ、今後は気温も上がり、新たな降雪は期待できないでしょうから、なんとか長持ちして欲しい。
+            %br/
+            デコサラダがお勧め。（かなりの量でおいしかった。）
+            %br/
+            リフト係の女の子がみんなかわいかった！スキーやボードも上手いんでしょうか？評価が上がります。 … （
+            = link_to 'もっと見る', '#'
+            ）
+
+          %p.author= link_to 'Review by  とし和尚', '#'
+      
+    .top-display-info
+      .inner
+        .title= link_to "グランデコ国際スキー場#{content_tag :span, '福島県'}", "#"
+        .photo-author= link_to "Photo by おっちゃん"
+
 #maincontent
   #main
     %section.section
