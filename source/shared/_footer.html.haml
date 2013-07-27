@@ -1,7 +1,7 @@
 %footer#footer
   .footer-inner
-    .footer-column
-      .logo= link_to image_tag('images/footer_logo.png', alt: 'Snoway'), '#'
+    .footer-column.footer-column-1
+      .logo= link_to image_tag('titan/common/footer_logo.png', alt: 'スキーヤー・スノーボーダーのためのみんなでつくるスキー場口コミサイト スノーウェイ'), '#'
       %p.copy
         = "#{content_tag :strong, 'スキーヤー・スノーボーダー'}のための"
         %br
@@ -12,7 +12,7 @@
         %li= link_to "#{content_tag :i, nil, class: 'icon-rss'}Snoway 公式ブログ", '#', target: "_blank"
 
       %address#ftr-bar copyright (C) 2013 snoway.jp All rights are reserved.
-    .footer-column
+    .footer-column.footer-column-2
       %section.section
         %h2= link_to "スキー場を探す#{content_tag :i, nil, class: 'icon-caret-right'}"
         %ul.section-list
@@ -30,7 +30,7 @@
             %ul.float-list
               - 9.times do
                 %li= link_to 'ニセコ', '#'
-    .footer-column
+    .footer-column.footer-column-3
       %section.section
         %h2= link_to "スキー旅行を予約する#{content_tag :i, nil, class: 'icon-caret-right'}"
         %ul.section-list
@@ -46,7 +46,7 @@
           %li= link_to "持ち物リストをチェックする#{content_tag :i, nil, class: 'icon-caret-right'}"
           %li= link_to "用語を調べる#{content_tag :i, nil, class: 'icon-caret-right'}"
           %li= link_to "大会情報#{content_tag :i, nil, class: 'icon-caret-right'}"
-    .footer-column
+    .footer-column.footer-column-4
       %section.section
         %h2= link_to "コミュニティ#{content_tag :i, nil, class: 'icon-caret-right'}"
         %ul.section-list
