@@ -15,44 +15,58 @@
       $('.powertip').powerTip();
     });
   .header-inner
-    %p#logo
-      %a{:href => "/"}
-        %img{:alt => "snoway スノーウェイ", :src => "img/titan/common/header_logo.png"}/
-    .header-search-form
-      %form{:action => "http://www.google.co.jp/search", :method => "get"}
-        %input.inputtext{:maxlength => "255", :name => "q", :size => "31", :type => "text", :value => ""}/
-        %input{:name => "ie", :type => "hidden", :value => "UTF-8"}/
-        %input{:name => "oe", :type => "hidden", :value => "Shift_JIS"}/
-        %input{:name => "hl", :type => "hidden", :value => "ja"}/
-        %input{:name => "btnG", :type => "submit", :value => "検索"}/
-        %input{:name => "domains", :type => "hidden", :value => "snoway.jp"}/
-        %input{:name => "sitesearch", :type => "hidden", :value => "snoway.jp"}/
+    .header-upper
+      %p#logo
+        %a{:href => "/"}
+          %img{:alt => "snoway スノーウェイ", :src => "images/titan/common/header_logo.png"}/
+      .header-search-form
+        %form{:action => "http://www.google.co.jp/search", :method => "get"}
+          %input.inputtext{:maxlength => "255", :name => "q", :size => "31", :type => "text", :value => ""}/
+          %input{:name => "ie", :type => "hidden", :value => "UTF-8"}/
+          %input{:name => "oe", :type => "hidden", :value => "Shift_JIS"}/
+          %input{:name => "hl", :type => "hidden", :value => "ja"}/
+          %input{:name => "btnG", :type => "submit", :value => "検索"}/
+          %input{:name => "domains", :type => "hidden", :value => "snoway.jp"}/
+          %input{:name => "sitesearch", :type => "hidden", :value => "snoway.jp"}/
   .hdrMenu-wrapper
-    %nav#hdrMenu
-      %ul
-        %li= link_to "#{content_tag :i, 'car', class: 'icon-lsf lsf'}スキー場を探す", '#'
-        %li.dropdown
-          = link_to "#{content_tag :i, nil, class: 'icon-calendar'}予約する#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
-          %ul.dropdown-content
-            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーツアーを探す", '#'
-            %li= link_to "#{content_tag :i, nil', class: 'icon-caret-right'}周辺のホテルを予約", '#'
-        %li.dropdown
-          = link_to "#{content_tag :i, nil, class: 'icon-cart'}ショッピング＆準備", '#'
-          %ul.dropdown-content
-            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ショップを探す", '#'
-            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ギアを探す", '#'
+    .hdrMenu-inner
+      %nav#hdrMenu
+        %ul
+          %li= link_to "#{content_tag :i, 'car', class: 'icon-lsf lsf'}スキー場を探す", '#'
+          %li.dropdown
+            = link_to "#{content_tag :i, nil, class: 'icon-calendar'}予約する#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+            %ul.dropdown-content
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーツアーを探す#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}周辺のホテルを予約", '#'
+          %li.dropdown
+            = link_to "#{content_tag :i, nil, class: 'icon-shopping-cart'}ショッピング＆準備#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+            %ul.dropdown-content
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ショップを探す", '#'
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ギアを探す", '#'
 
+          %li.dropdown
+            = link_to "#{content_tag :i, nil, class: 'icon-comments'}コミュニティ#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+            %ul.dropdown-content
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーウェイトーク", '#'
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}Snower ランキング", '#'
+      %ul#login
+        -# ログイン時
+        %li.thumbnail= link_to image_tag('https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/195380_785944456_1205910944_q.jpg', alt: 'USERNAME'), '#', class: 'powertip', title: 'マイページへ'
+        %li.username= link_to 'おっちゃん', '#'
         %li.dropdown
-          = link_to "#{content_tag :i, nil, class: 'icon-comments'}コミュニティ", '#'
+          = link_to "#{content_tag :i, nil, class:'icon-cog'}", '#'
           %ul.dropdown-content
-            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーウェイトーク", '#'
-            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}Snower ランキング", '#'
-    %ul#login
-      %li
-        %a{:href => "/member/login.php"}
-          %i.icon-user>
-          新規会員登録
-      %li
-        %a{:href => "/my/login/?url=http%3A%2F%2Fsnoway.jp%2F", :rel => "nofollow,noindex"}
-          %i.icon-sign-in>
-          ログイン
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}登録情報の編集", '#'
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}メール配信設定", '#'
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}外部サービス連携", '#'
+            %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}メールボックス", '#'
+        %li= link_to "#{content_tag :i, nil, class: 'icon-signout'}",'#', class: 'powertip', title: 'ログアウト'
+        -# 未ログイン時
+          %li
+            %a{:href => "/member/login.php"}
+              %i.icon-user>
+              新規会員登録
+          %li
+            %a{:href => "/my/login/?url=http%3A%2F%2Fsnoway.jp%2F", :rel => "nofollow,noindex"}
+              %i.icon-signin>
+              ログイン
