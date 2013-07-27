@@ -1,0 +1,79 @@
+*
+  font-size: 100%
+  padding: 0
+  margin: 0
+  word-break: break-all
+
+body
+  text-align: center
+  font-size: 13px
+  +main-font
+  background: white
+  color: #444
+  line-height: 1.6
+
+.clear
+  zoom: 100%
+
+.clear:after
+  content: "."
+  clear: both
+  height: 0
+  display: block
+  visibility: hidden
+  line-height: 1.6
+
+.hid
+  display: none
+
+strong
+  font-weight: bold
+
+/* 水平線デフォルト
+hr
+  color: #ddd
+  background: #ddd
+  height: 1px
+  margin: 5px 0
+  padding: 0
+  border: none
+
+/* リンク色設定
+a
+  +transition-duration(.3s)
+  &:visited
+    color: $link-color
+    text-decoration: none
+  &:active
+    color: $hover-color
+    text-decoration: none
+  &:link
+    color: $link-color
+    text-decoration: none
+  &:hover
+    color: $hover-color
+    text-decoration: none
+
+span.err
+  color: $red
+  font-size: 90%
+  display: block
+
+img
+  border: none
+
+.num
+  +num-font
+  font-size: 120%
+
+i.icon-external-link
+  font-size: 80%
+  +relative
+  top: 0px
+  margin-left: 2px
+
+/* ぱんくず
+#pankuzu
+  font-size: 90%
+  letter-spacing: 1px
+  margin: 5px 10px 10px 5px

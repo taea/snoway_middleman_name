@@ -1,0 +1,76 @@
+.section-list
+  li
+    padding: 5px 0
+    border-bottom: 1px dotted $line-color
+    +relative
+    i
+      font-size: 130%
+      margin:
+        left: 3px
+        right: 5px
+      color: $icon-color
+      &.icon-caret-right
+        font-size: 100%
+    a
+      &:hover
+        i
+          color: $hover-color
+    .num
+      +absolute
+      top: 2px
+      right: 0
+    ul
+      li
+        padding-left: 20px
+        &:last-child
+          border: none
+          padding-bottom: 0
+        &:first-child
+          border-top: 1px dotted $line-color
+          margin-top: 5px
+
+  &.skying-records
+    li
+      +pie-clearfix
+    ul
+      li
+        float: left
+        padding: 0
+        margin: 0
+        margin-right: 5px
+        border: none
+        &:first-child
+          margin: 0
+        &.thumbnail
+          @extend .thumbnail-s
+          margin-right: 5px
+      .num
+        +relative
+        top: 0
+        left: 0
+
+  &.talk
+    .ski
+      i.icon-comments
+        color: $ski-color
+    .snowboard
+      i.icon-comments
+        color: $snowboard-color
+    .gerande
+      i.icon-comments
+        color: $gerande-color
+    .qa
+      i.icon-comments
+        color: $qa-color
+    .others
+      i.icon-comments
+        color: $others-color
+
+  &.link
+    .icon-caret-right
+      +absolute
+      top: 10px
+      left: 0
+    li
+      padding:
+        left: 16px

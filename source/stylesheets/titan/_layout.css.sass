@@ -1,0 +1,40 @@
+/* -------------------------------------------------------
+ * layout
+ * -----------------------------------------------------
+
+#maincontent
+  width: $width
+  +clearfix
+  margin: 0 auto
+  text-align: left
+
+#maincontent-left
+  width: $main-width
+  float: left
+
+#maincontent-right
+  width: $side-width
+  float: right
+
+#main
+  width: $main-width
+  float: left
+
+#sub
+  width: $side-width
+  float: right
+
+#maincontent.col1 #main
+  width: $width
+
+#ttl1
+  background: transparent url(/img/common/ttl_bg1.gif) no-repeat left top
+  font-size: 22px
+  min-height: 32px
+  font-weight: bold
+  padding: 7px 10px 0 23px
+  color: #666
+  text-shadow: 0 1px 2px #fff
+
+#main #ttl1
+  background: transparent url(/img/common/ttl_bg1_650.gif) no-repeat left top
