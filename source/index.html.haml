@@ -30,23 +30,277 @@
 
 #maincontent
   #main
-    .section.tab-box
+    .section.tab-box.search-tab-box
       %nav
         %ul.tab-box-nav
           %li.current= "#{content_tag :i, nil, class: 'icon-map-marker'}エリアで探す"
           %li= "#{content_tag :i, 'car', class: 'lsf icon-lsf'}アクセスで探す"
           %li= "#{content_tag :i, nil, class: 'icon-flag'}イベントで探す"
           %li= "#{content_tag :i, nil, class: 'icon-comments'}レビューで探す"
-        .tab-box-content-wrapper
-          %ul.tab-box-content-list
-            %li.tab-box-content.tab-box-content-1
-              1
-            %li.tab-box-content.tab-box-content-2
-              2
-            %li.tab-box-content.tab-box-content-3
-              3
-            %li.tab-box-content.tab-box-content-4
-              4
+      .tab-box-content-wrapper
+        %ul.tab-box-content-list
+          %li
+            .tab-box-content.area    
+              .search-map-wrapper
+                %h3 エリアを選択してください
+                %ul.search-map
+                  %li.hokkaido= "北海道"
+                  %li.tohoku= "東北"
+                  %li.kanto= "関東"
+                  %li.chubu= "中部"
+                  %li.kinki= "近畿"
+                  %li.chugoku= "中国"
+                  %li.shikoku= "四国"
+                  %li.kyushu= "九州"
+              .search-area-left-wrapper
+                .search-area-list
+                  %h3 全国の代表的なスキー場エリア
+                  %ul.float-list
+                    - 23.times do
+                      %li= link_to "キロロ#{content_tag :span, '3', class: 'num'}", '#'
+                %ul.search-area-summary-list
+                  %li
+                    .search-area-summary-list.hokkaido
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 北海道のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.tohoku
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 東北のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.kanto
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 関東のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.chubu
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 中部のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.kinki
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 近畿のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.chugoku
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 中国のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.shikoku
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 四国のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+                  %li
+                    .search-area-summary-list.shikoku
+                      = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                      %h3 九州のゲレンデ
+                      %ul.float-list
+                        - 6.times do
+                          %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+                      %dl.section-dl.search-gerande-list
+                        - 3.times do
+                          =link_to '#' do
+                            %dt 猪苗代
+                            %dd.point
+                              - 5.times do
+                                %i.icon-star
+                              %span.num 4.3
+                              %i.icon-caret-right
+
+          %li
+            .tab-box-content.access
+              %ul.search-access-step-wrapper
+                %li.search-access-step
+                  %ul.radio-button-list
+                    %li
+                      %input{type: 'radio', name: 'departure_place', value: 'tokyo', id: 'tokyo'}
+                      %label{for: 'tokyo'} 東京から
+                    %li
+                      %input{type: 'radio', name: 'departure_place', value: 'osaka', id: 'osaka'}
+                      %label{for: 'osaka'} 大阪から
+                    %li
+                      %input{type: 'radio', name: 'departure_place', value: 'sapporo', id: 'sapporo'}
+                      %label{for: 'sapporo'} 札幌から
+                    %li.submit
+                      %input{type: 'submit', value: '検索'}
+                %li.search-access-step
+                  %ul.radio-button-list
+                    %li
+                      %input{type: 'radio', name: 'transportation', value: 'car', id: 'car'}
+                      %label{for: 'car'} #{content_tag :i, 'car', class: 'icon-lsf lsf'}車で
+                    %li
+                      %input{type: 'radio', name: 'transportation', value: 'train', id: 'train'}
+                      %label{for: 'train'} #{content_tag :i, 'bus', class: 'icon-lsf lsf'}電車で
+                %li.search-access-step
+                  %select
+                    %option{value: 1} 1
+                    %option{value: 2} 2
+                    %option{value: 3} 3
+                    %option{value: 4} 4
+                    %option{value: 5} 5
+                    %option{value: 6} 6
+                  時間
+                  %br/
+                  以内で行ける
+                  %br/
+                  スキー場
+              %ul.search-check-box-list
+                %li
+                  %h3 こだわり
+                  %ul.checkbox-list
+                    %li
+                      %input{type: 'checkbox', name: 'facility', value: 'half_pipe', id: 'half_pipe'}
+                      %label{for: 'half_pipe'}ハーフパイプ
+                    %li
+                      %input{type: 'checkbox', name: 'facility', value: 'snow_park', id: 'snow_park'}
+                      %label{for: 'snow_park'}スノーパーク
+                %li
+                  %h3 平日リフト料金
+                  %ul.checkbox-list
+                    %li
+                      %input{type: 'checkbox', name: 'lift_price', value: '2000', id: '2000'}
+                      %label{for: '2000'}2,000円以下
+                    %li
+                      %input{type: 'checkbox', name: 'lift_price', value: '3000', id: '3000'}
+                      %label{for: '3000'}3,000円以下
+                    %li
+                      %input{type: 'checkbox', name: 'lift_price', value: '4000', id: '4000'}
+                      %label{for: '4000'}4,000円以下
+          %li
+            .tab-box-content.event
+              .calendar
+                カレンダー
+              %h3 イベントの種類から探す
+              %ul.section-list
+                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキー試乗会", '#'
+                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボード試乗会", '#'
+                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボード大会", '#'
+                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}抽選会等当たるイベント", '#'
+          %li
+            .tab-box-content.review
+              %h3= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}総合ランキング", '#'
+              %ul.item-list
+                - 3.times do
+                  %li
+                    .ranking= "#{content_tag :span, 1, class: 'num'}位"
+                    .image= link_to image_tag('http://snoway.jp/img/review/s/00/27/10002722.jpg', alt: 'ゲレンデ名'), '#'
+                    %h4.title
+                      = link_to '#' do
+                        グランデコスキー場
+                        %span （福島）
+                    .point
+                      %i.icon-star
+                      %i.icon-star
+                      %i.icon-star
+                      %i.icon-star.disabled
+                      %i.icon-star.disabled
+                      %span.num 3.5
+                    %p.comment= link_to "#{content_tag :i, nil, class:'icon-comment'}GWもやってたんですね！"
+              %ul.item-list.end
+                - 4.times do
+                  %li
+                    .ranking= "#{content_tag :span, 1, class: 'num'}位"
+                    %h4.title
+                      = link_to '#' do
+                        グランデコスキー場
+                        %span （福島）
+                    .point
+                      %i.icon-star
+                      %i.icon-star
+                      %i.icon-star
+                      %i.icon-star.disabled
+                      %i.icon-star.disabled
+                      %span.num 3.5
+              .review-conditions-wrapper
+                %ul.section-list
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーヤーからの評価が高い"
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボーダーからの評価が高い"
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}コースパフォーマンスが良い"
+                %ul.section-list.end
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキー場の施設が充実"
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}ゲレ食の評価が高い"
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}アクセスが良い"
 
     %section.section
       %h2= "#{content_tag :i, nil, class: 'icon-thumbs-up-alt'}PICKUP スキー場"

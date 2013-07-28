@@ -14,14 +14,36 @@
     jQuery(function($){
       $('.powertip').powerTip();
 
-      $('ul.tab-box-content-list li').hide();
-      $('ul.tab-box-content-list li:first-child').show();
+    $('.dropdown').hover(function() {
+      $(this).addClass('hover');
+    }, function() {
+      $(this).removeClass('hover');
+    });
+    var eachTimeout = [],
+      target = $('.dropdown ul');
+    
+    target.each(function(i) {
+      var $this = $(this);
+      $this.parent().hover(function() {
+        target.hide();
+          for ( var i=0; i<eachTimeout.length; i++ ) {
+            clearTimeout(eachTimeout[i]);
+          }
+          $this.show();
+        }, function() {
+          eachTimeout[i] = setTimeout(function() {
+            $this.hide();
+          }, 300);
+        });
+      });
+
+      $('ul.tab-box-content-list li:first-child').find('.tab-box-content').show();
       $('ul.tab-box-nav li').on('click', function(){
         $('ul.tab-box-nav').find('li.current').toggleClass('current')
         $(this).toggleClass('current')
         var tabBoxIndex = $('ul.tab-box-nav li').index(this) + 1;
-        $(this).parent().parent().find('ul.tab-box-content-list li').hide();
-        $(this).parent().parent().find('ul.tab-box-content-list li:nth-child(' + tabBoxIndex +')').show();
+        $(this).parent().parent().parent().find('ul.tab-box-content-list li').find('.tab-box-content').hide();
+        $(this).parent().parent().parent().find('ul.tab-box-content-list li:nth-child(' + tabBoxIndex +')').find('.tab-box-content').show();
       });
 
     });
@@ -45,9 +67,10 @@
         %ul
           %li= link_to "#{content_tag :i, 'car', class: 'icon-lsf lsf'}スキー場を探す", '#'
           %li.dropdown
-            = link_to "#{content_tag :i, nil, class: 'icon-calendar'}予約する#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+            = link_to '#' do
+              = "#{content_tag :i, nil, class: 'icon-calendar'}予約する#{content_tag :i, nil, class: 'icon-caret-down'}"
             %ul.dropdown-content
-              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーツアーを探す#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
+              %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーツアーを探す", '#'
               %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}周辺のホテルを予約", '#'
           %li.dropdown
             = link_to "#{content_tag :i, nil, class: 'icon-shopping-cart'}ショッピング＆準備#{content_tag :i, nil, class: 'icon-caret-down'}", '#'
