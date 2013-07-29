@@ -90,3 +90,24 @@ input[type="search"]::-webkit-search-decoration
 
 label.disabled, .label.disabled
   +opacity(.4)
+
+.checkbox-list, .radio-button-list
+  label
+    i
+      font-size: 140%
+      margin-right: 3px
+      color: $icon-color
+    &:hover
+      color: $hover-color 
+      i
+        color: $hover-color
+  input:checked+label
+    color: #000
+    font-weight: bold
+    i
+      color: $sub-text-color
+  li
+    margin-bottom: 3px
+  input
+    margin-right: 3px
+    

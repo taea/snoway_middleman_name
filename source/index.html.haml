@@ -194,7 +194,7 @@
                 %li.search-access-step
                   %ul.radio-button-list
                     %li
-                      %input{type: 'radio', name: 'departure_place', value: 'tokyo', id: 'tokyo'}
+                      %input{type: 'radio', name: 'departure_place', value: 'tokyo', id: 'tokyo', checked: 'checked'}
                       %label{for: 'tokyo'} 東京から
                     %li
                       %input{type: 'radio', name: 'departure_place', value: 'osaka', id: 'osaka'}
@@ -202,29 +202,30 @@
                     %li
                       %input{type: 'radio', name: 'departure_place', value: 'sapporo', id: 'sapporo'}
                       %label{for: 'sapporo'} 札幌から
-                    %li.submit
-                      %input{type: 'submit', value: '検索'}
                 %li.search-access-step
                   %ul.radio-button-list
                     %li
-                      %input{type: 'radio', name: 'transportation', value: 'car', id: 'car'}
+                      %input{type: 'radio', name: 'transportation', value: 'car', id: 'car', checked: 'checked'}
                       %label{for: 'car'} #{content_tag :i, 'car', class: 'icon-lsf lsf'}車で
                     %li
                       %input{type: 'radio', name: 'transportation', value: 'train', id: 'train'}
                       %label{for: 'train'} #{content_tag :i, 'bus', class: 'icon-lsf lsf'}電車で
                 %li.search-access-step
-                  %select
-                    %option{value: 1} 1
-                    %option{value: 2} 2
-                    %option{value: 3} 3
-                    %option{value: 4} 4
-                    %option{value: 5} 5
-                    %option{value: 6} 6
-                  時間
-                  %br/
+                  .inner
+                    %select
+                      %option{value: 1} 1
+                      %option{value: 2} 2
+                      %option{value: 3} 3
+                      %option{value: 4} 4
+                      %option{value: 5} 5
+                      %option{value: 6} 6
+                    時間
                   以内で行ける
                   %br/
                   スキー場
+                %li.submit
+                  %input{type: 'submit', value: '検索'}
+
               %ul.search-check-box-list
                 %li
                   %h3 こだわり
@@ -247,16 +248,30 @@
                     %li
                       %input{type: 'checkbox', name: 'lift_price', value: '4000', id: '4000'}
                       %label{for: '4000'}4,000円以下
+                %li
+                  %h3 ファミリー向け
+                  %ul.checkbox-list
+                    %li
+                      %input{type: 'checkbox', name: 'for_family', value: 'free_lift', id: 'free_lift'}
+                      %label{for: 'free_lift'}小学生以下リフト料金無料
+                    %li
+                      %input{type: 'checkbox', name: 'for_family', value: 'nursery', id: 'nursery'}
+                      %label{for: 'nursery'}託児所
+                    %li
+                      %input{type: 'checkbox', name: 'for_family', value: 'kids_park', id: 'kids_park'}
+                      %label{for: 'kids_park'}キッズパーク
+                    
           %li
             .tab-box-content.event
               .calendar
                 カレンダー
-              %h3 イベントの種類から探す
-              %ul.section-list
-                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキー試乗会", '#'
-                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボード試乗会", '#'
-                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボード大会", '#'
-                %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}抽選会等当たるイベント", '#'
+              .search-event-left
+                %h3 イベントの種類から探す
+                %ul.section-list
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキー試乗会", '#'
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボード試乗会", '#'
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボード大会", '#'
+                  %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}抽選会等当たるイベント", '#'
           %li
             .tab-box-content.review
               %h3= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}総合ランキング", '#'
