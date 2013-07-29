@@ -58,4 +58,15 @@
         float: right
 
     &.review
-      
+      .item-list
+        width: ($main-width - 10px - 10px) / 2 - 10px
+        float: left
+        li
+          +pie-clearfix
+          padding:
+            bottom: 5px
+          border-bottom: 1px dotted $line-color
+          float: none
+        .ranking, .image
+          float: left
+          margin-right: 1px

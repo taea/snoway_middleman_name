@@ -58,4 +58,55 @@
         float: right
 
     &.review
-      
+      .inner
+        +pie-clearfix
+      .item-list
+        width: ($main-width - 10px - 10px) / 2 - 15px + 50px
+        float: left
+        li
+          width: ($main-width - 10px - 10px) / 2 - 15px + 50px
+          +pie-clearfix
+          padding:
+            bottom: 5px
+            top: 10px
+          border-bottom: 1px dotted $line-color
+          float: none
+          &:last-child
+            border-bottom: none
+        .ranking, .image
+          float: left
+          margin-right: 5px
+        .image
+          width: 80px
+          height: 60px
+          +border-radius(3px)
+          a
+            +border-radius(3px)
+            width: 80px
+            height: 60px
+            img
+              +border-radius(3px)
+              width: 80px
+              height: 60px
+        .title
+          a
+            display: block
+            width: 200px
+            +nowrap
+          margin-bottom: 3px
+        p
+          width: 200px
+          +nowrap
+        &.end
+          float: right
+          width: ($main-width - 10px - 10px) / 2 - 15px - 50px
+          li
+            width: ($main-width - 10px - 10px) / 2 - 15px - 50px
+
+      .inner.section-list-wrapper
+        margin-top: 10px
+      .section-list
+        width: ($main-width - 10px - 10px) / 2 - 15px
+        float: left
+        &.end
+          float: right

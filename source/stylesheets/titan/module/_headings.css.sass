@@ -32,3 +32,18 @@ h3
   font-weight: bold
   font-size: $size-14px
   color: $text-color
+  i
+    font-size: 170%
+    +relative
+    top: 3px
+    margin-right: 5px
+    color: $icon-color
+    &.icon-caret-right
+      font-size: 80%
+      margin-left: 3px
+      top: -2px
+  a
+    font-weight: bold
+    &:hover
+      i
+        color: $hover-color

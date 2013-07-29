@@ -243,39 +243,41 @@
       %li
         .tab-box-content.review
           %h3= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}総合ランキング", '#'
-          %ul.item-list
-            - 3.times do
-              %li
-                .ranking= "#{content_tag :span, 1, class: 'num'}位"
-                .image= link_to image_tag('http://snoway.jp/img/review/s/00/27/10002722.jpg', alt: 'ゲレンデ名'), '#'
-                %h4.title
-                  = link_to '#' do
-                    グランデコスキー場
-                    %span （福島）
-                .point
-                  %i.icon-star
-                  %i.icon-star
-                  %i.icon-star
-                  %i.icon-star.disabled
-                  %i.icon-star.disabled
-                  %span.num 3.5
-                %p.comment= link_to "#{content_tag :i, nil, class:'icon-comment'}GWもやってたんですね！"
-          %ul.item-list.end
-            - 4.times do
-              %li
-                .ranking= "#{content_tag :span, 1, class: 'num'}位"
-                %h4.title
-                  = link_to '#' do
-                    グランデコスキー場
-                    %span （福島）
-                .point
-                  %i.icon-star
-                  %i.icon-star
-                  %i.icon-star
-                  %i.icon-star.disabled
-                  %i.icon-star.disabled
-                  %span.num 3.5
-          .review-conditions-wrapper
+          .inner
+            %ul.item-list
+              - 3.times do
+                %li
+                  .ranking= "#{content_tag :span, 1, class: 'num'}位"
+                  .image= link_to image_tag('http://snoway.jp/img/review/s/00/27/10002722.jpg', alt: 'ゲレンデ名'), '#'
+                  %h4.title
+                    = link_to '#' do
+                      グランデコスキー場
+                      %span （福島）
+                  .point
+                    %i.icon-star
+                    %i.icon-star
+                    %i.icon-star
+                    %i.icon-star.disabled
+                    %i.icon-star.disabled
+                    %span.num 3.5
+                  %p.comment= link_to "#{content_tag :i, nil, class:'icon-comment'}GWもやってたんですね！もう最高のゲレンデです！すごいです！"
+            %ul.item-list.end
+              - 4.times do
+                %li
+                  .ranking= "#{content_tag :span, 1, class: 'num'}位"
+                  %h4.title
+                    = link_to '#' do
+                      グランデコスキー場
+                      %span （福島）
+                  .point
+                    %i.icon-star
+                    %i.icon-star
+                    %i.icon-star
+                    %i.icon-star.disabled
+                    %i.icon-star.disabled
+                    %span.num 3.5
+          %p.link-more= link_to "ランキングをもっと見る#{content_tag :i, nil, class: 'icon-caret-right'}", '#'
+          .inner.section-list-wrapper
             %ul.section-list
               %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スキーヤーからの評価が高い"
               %li= link_to "#{content_tag :i, nil, class: 'icon-caret-right'}スノーボーダーからの評価が高い"
