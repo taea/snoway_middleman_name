@@ -13,13 +13,13 @@
 @import titan/vendor/jquery.powertip.min.scss
 
 //Original
-@import titan/variables
-@import titan/mixin
-@import titan/override_vendor
+@import titan/base/variables
+@import titan/base/mixin
+@import titan/base/override_vendor
 
-@import titan/base
-@import titan/layout
-@import titan/parts
+@import titan/base/base
+@import titan/base/layout
+
 @import titan/module/section
 @import titan/module/headings
 @import titan/module/button
@@ -35,8 +35,10 @@
 @import titan/module/section-dl
 @import titan/module/tab-box
 @import titan/module/ad
-@import titan/header
-@import titan/footer
-@import titan/side
+
+@import titan/state/header
+@import titan/state/footer
+@import titan/state/side
+@import titan/state/search-tab-box
 
 @import titan/index
