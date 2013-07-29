@@ -9,28 +9,37 @@
     %ul.tab-box-content-list
       %li
         .tab-box-content.area    
-          .search-map-wrapper
-            %h3 エリアを選択してください
-            %ul.search-map
-              %li.hokkaido= "北海道"
-              %li.tohoku= "東北"
-              %li.kanto= "関東"
-              %li.chubu= "中部"
-              %li.kinki= "近畿"
-              %li.chugoku= "中国"
-              %li.shikoku= "四国"
-              %li.kyushu= "九州"
-          .search-area-left-wrapper
-            .search-area-list
-              %h3 全国の代表的なスキー場エリア
-              %ul.float-list
-                - 23.times do
-                  %li= link_to "キロロ#{content_tag :span, '3', class: 'num'}", '#'
-            %ul.search-area-summary-list
-              %li
-                .search-area-summary-list.hokkaido
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 北海道のゲレンデ
+          .search-area-default
+            .search-map-wrapper
+              %h3 エリアを選択してください
+              %ul.search-map
+                %li.hokkaido= "北海道"
+                %li.tohoku= "東北"
+                %li.kanto= "関東"
+                %li.chubu= "中部"
+                %li.kinki= "近畿"
+                %li.chugoku= "中国"
+                %li.shikoku= "四国"
+                %li.kyushu= "九州"
+            .search-area-right-wrapper
+              .search-area-list
+                %h3 全国の代表的なスキー場エリア
+                %ul.float-list
+                  - 23.times do
+                    %li= link_to "キロロ#{content_tag :span, '3', class: 'num'}", '#'
+          %ul.search-area-summary-list
+            %li
+              .search-area-summary.hokkaido
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 北海道
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
@@ -43,10 +52,18 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.tohoku
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 東北のゲレンデ
+            %li
+              .search-area-summary.tohoku
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 東北
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
@@ -59,10 +76,18 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.kanto
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 関東のゲレンデ
+            %li
+              .search-area-summary.kanto
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 関東
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
@@ -75,10 +100,18 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.chubu
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 中部のゲレンデ
+            %li
+              .search-area-summary.chubu
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 中部
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
@@ -91,10 +124,18 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.kinki
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 近畿のゲレンデ
+            %li
+              .search-area-summary.kinki
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 近畿
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
@@ -107,10 +148,18 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.chugoku
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 中国のゲレンデ
+            %li
+              .search-area-summary.chugoku
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 中国
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
@@ -123,13 +172,18 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.shikoku
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 四国のゲレンデ
-                  %ul.float-list
-                    - 6.times do
-                      %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
+            %li
+              .search-area-summary.shikoku
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 四国
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %dl.section-dl.search-gerande-list
                     - 3.times do
                       =link_to '#' do
@@ -139,17 +193,25 @@
                             %i.icon-star
                           %span.num 4.3
                           %i.icon-caret-right
-              %li
-                .search-area-summary-list.shikoku
-                  = link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
-                  %h3 九州のゲレンデ
+            %li
+              .search-area-summary.kyushu
+                .search-area-summary-content
+                  .remove-button= link_to "#{content_tag :i, nil, class: 'icon-remove-sign'}", '#', class: 'powertip', title: '戻る'
+                  %h3 
+                    = link_to '#' do
+                      %strong 九州
+                      のゲレンデ
+                      %span.count
+                        %span.num<> 120
+                        件
+                        %i.icon-caret-right
                   %ul.float-list
                     - 6.times do
                       %li= link_to "青森#{content_tag :span, '24', class: 'num'}", '#'
                   %dl.section-dl.search-gerande-list
                     - 3.times do
                       =link_to '#' do
-                        %dt 猪苗代
+                        %dt 猪苗代猪苗代猪苗代猪苗代ゲレンデー
                         %dd.point
                           - 5.times do
                             %i.icon-star

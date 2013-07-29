@@ -45,6 +45,19 @@
         $(this).parent().parent().parent().find('ul.tab-box-content-list li').find('.tab-box-content').hide();
         $(this).parent().parent().parent().find('ul.tab-box-content-list li:nth-child(' + tabBoxIndex +')').find('.tab-box-content').show();
       });
+      
+      $('.tab-box-content ul.search-map li').on('click', function(){
+        $(this).parent().parent().find('ul.search-map li').removeClass('current')
+        $(this).addClass('current');
+        var searchMapIndex = $(this).index() + 1;
+        $(this).parent().parent().parent().parent().parent().find('.search-area-summary').hide();
+        $(this).parent().parent().parent().parent().parent().find('ul.search-area-summary-list li:nth-child(' + searchMapIndex + ')').find('.search-area-summary').show();
+      });
+      $('.tab-box-content .remove-button a').on('click', function(){
+        $(this).parent().parent().parent().parent().find('.search-area-summary').hide();
+        $(this).parent().parent().parent().parent().parent().parent().find('.search-map li').removeClass('current');
+        return false;
+      });
 
     });
   .header-inner
